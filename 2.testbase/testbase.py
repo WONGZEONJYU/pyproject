@@ -49,3 +49,26 @@ print("bool num False = ", int(num))
 print(num)
 print(type(num))
 print(id(num))
+
+#complex 复数 实数和虚数都是用浮点数存储
+'''
+typedef struct{
+    double real;
+    double imag;
+}Py_complex
+typedef struct {
+    PyObject_HEAD
+    Py_complex cval;
+}PyComplexObject
+'''
+num = 1 + 2j
+num = complex(1, 2)
+print(num)
+print(type(num))
+print(id(num))
+print("type(num.imag) = ", type(num.imag))
+print("type(num.real) = ", type(num.real))
+print("num.imag = ", num.imag)
+print("num.real = ", num.real)
+
+
