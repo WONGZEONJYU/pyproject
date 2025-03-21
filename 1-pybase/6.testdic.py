@@ -27,5 +27,4 @@ except KeyError:
 if "year" in dic:
     print("key year in dic")
 
-
 dic.clear()
