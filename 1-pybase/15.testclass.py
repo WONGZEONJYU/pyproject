@@ -47,10 +47,15 @@ print("video.age = ", video.age)
 #print(video.__name)
 print("video.get_name() = ", video.get_name())
 
+#__m1成员属性虽然名称前缀带__,但是它由于是动态创建,所以它并非为私有属性,私有属性只能在类内通过__前缀定义
+#就算是类内通过__前缀定义的属性属于私有属性,它只是一种约定规则,并非是安全机制
+video.__m1 = "m1"
+print(video.__m1)
+
 print("=====================================")
 # 类继承
 class Mp4Video(Video):
-    def __init__(self, path): # 不会主动调用父类构造函数，需要显示调用
+    def __init__(self, path): # 不会主动调用父类构造函数,需要显示调用
         Video.__init__(self, path)
         print("Create Mp4Video")
 
