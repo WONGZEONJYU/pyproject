@@ -36,7 +36,7 @@ finally:
 
 #自定义异常
 class XError(Exception):
-    def __init__(self, value=""):
+    def __init__(self, value= ""):
         self.value = value
 
     #用来print
